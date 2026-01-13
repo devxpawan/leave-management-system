@@ -1,9 +1,5 @@
 # leave-management-system
 
-## About the Project
-
-The Leave Management System is a web-based application designed to streamline and automate the process of managing employee leave requests within an organization. It provides features for employees to submit leave requests, and for administrators to review, approve, or reject those requests. The system also includes user management, policy management, and a dashboard for tracking leave statistics.
-
 ### Key Features
 
 - Employee leave request submission
