@@ -43,7 +43,7 @@ require_once 'header.php';
 ?>
 
 <div class="card" style="margin-bottom: 2rem;">
-    <h2>Welcome back, <?php echo htmlspecialchars($username); ?>!</h2>
+    <h2>Welcome to Leavely, <?php echo htmlspecialchars($username); ?>!</h2>
     <p>You are logged in as <span class="status-badge status-approved"><?php echo ucfirst($role); ?></span></p>
 </div>
 

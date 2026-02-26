@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="auth-container">
         <div class="card auth-card">
             <div style="text-align: center; margin-bottom: 2rem;">
-                <h2 style="color: var(--primary-color);">Welcome Back</h2>
+                <h2 style="color: var(--primary-color);">Welcome to Leavely</h2>
                 <p>Sign in to manage your leaves</p>
             </div>
             
