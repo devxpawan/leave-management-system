@@ -1,6 +1,6 @@
 <?php
-require_once 'auth.php';
-require_once 'config.php';
+require_once '../includes/auth.php';
+require_once '../includes/config.php';
 
 if (!$auth->isLoggedIn() || $auth->getUserRole() != 'admin') {
     header('Location: index.php');
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $policies = $pdo->query("SELECT * FROM leave_policies ORDER BY leave_type")->fetchAll();
 
-require_once 'header.php';
+require_once '../includes/header.php';
 ?>
 
 <div class="card" style="margin-bottom: 2rem;">
@@ -90,4 +90,4 @@ require_once 'header.php';
         </table>
     </div>
 </div>
-<?php require_once 'footer.php'; ?>     
+<?php require_once '../includes/footer.php'; ?>     

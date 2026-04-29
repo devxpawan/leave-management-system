@@ -1,6 +1,6 @@
 <?php
-require_once 'auth.php';
-require_once 'config.php';
+require_once '../includes/auth.php';
+require_once '../includes/config.php';
 
 if (!$auth->isLoggedIn() || $auth->getUserRole() != 'manager') {
     header('Location: index.php');
@@ -33,7 +33,7 @@ $requests = $pdo->prepare("
 $requests->execute([$manager_id]);
 $requests = $requests->fetchAll();
 
-require_once 'header.php';
+require_once '../includes/header.php';
 ?>
 
 <div class="card">
@@ -82,4 +82,4 @@ require_once 'header.php';
     <?php endif; ?>
 </div>
 
-<?php require_once 'footer.php'; ?>
+<?php require_once '../includes/footer.php'; ?>

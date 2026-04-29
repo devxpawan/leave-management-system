@@ -1,6 +1,6 @@
 <?php
-require_once 'auth.php';
-require_once 'config.php';
+require_once '../includes/auth.php';
+require_once '../includes/config.php';
 
 if (!$auth->isLoggedIn() || $auth->getUserRole() != 'employee') {
     header('Location: index.php');
@@ -32,7 +32,7 @@ foreach ($policies as $policy) {
     ];
 }
 
-require_once 'header.php';
+require_once '../includes/header.php';
 ?>
 
 <!-- Leave Balance Summary -->
@@ -141,4 +141,4 @@ require_once 'header.php';
 }
 </style>
 
-<?php require_once 'footer.php'; ?>
+<?php require_once '../includes/footer.php'; ?>

@@ -1,6 +1,6 @@
 <?php
-require_once 'auth.php';
-require_once 'config.php';
+require_once '../includes/auth.php';
+require_once '../includes/config.php';
 
 if (!$auth->isLoggedIn()) {
     header('Location: index.php');
@@ -39,7 +39,7 @@ if ($role == 'employee') {
     $stats['policies'] = $pdo->query("SELECT COUNT(*) FROM leave_policies")->fetchColumn();
 }
 
-require_once 'header.php';
+require_once '../includes/header.php';
 ?>
 
 <div class="card" style="margin-bottom: 2rem;">
@@ -89,4 +89,4 @@ require_once 'header.php';
     <?php endif; ?>
 </div>
 
-<?php require_once 'footer.php'; ?>
+<?php require_once '../includes/footer.php'; ?>

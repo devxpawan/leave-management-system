@@ -1,6 +1,6 @@
 <?php
-require_once 'auth.php';
-require_once 'config.php';
+require_once '../includes/auth.php';
+require_once '../includes/config.php';
 
 if (!$auth->isLoggedIn() || $auth->getUserRole() != 'admin') {
     header('Location: index.php');
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $users = $pdo->query("SELECT u.*, m.username as manager_name FROM users u LEFT JOIN users m ON u.manager_id = m.id ORDER BY u.role, u.username")->fetchAll();
 $managers = $pdo->query("SELECT * FROM users WHERE role = 'manager'")->fetchAll();
 
-require_once 'header.php';
+require_once '../includes/header.php';
 ?>
 
 <div class="card" style="margin-bottom: 2rem;">
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const formData = new FormData();
                 formData.append('username', username);
 
-                fetch('check_username.php', {
+                fetch('../public/check_username.php', {
                     method: 'POST',
                     body: formData
                 })
@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 formData.append('username', username);
                 formData.append('user_id', userId); // Pass user_id to exclude current user's username
 
-                fetch('check_username.php', {
+                fetch('../public/check_username.php', {
                     method: 'POST',
                     body: formData
                 })
@@ -414,4 +414,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<?php require_once 'footer.php'; ?>
+<?php require_once '../includes/footer.php'; ?>
